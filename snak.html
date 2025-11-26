@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUN WATER SNAKE</title>
+    <link rel="stylesheet" href="snak.css">
+
+</head>
+<body>
+    <h1>GUN WATER SNAKE (TWO PLAYERS )</h1>
+    <section id="game-info">
+        <p>Rules:</p>
+        <ul>
+            <li>Gun kills snake </li>
+            <li>snake drinks water</li>
+            <li>water douses gun</li>
+        </ul>
+        <p>Total Round: <span id ="TOTAL-round">10</span></p>
+        <p>Current Round: <span id="current-round">1</span></p>
+
+    </section>
+
+    <section id="scoreboard">
+        <h2>Score Board</h2>
+        <p>Player 1 Score: <span id="player1-score">0</span></p>
+        <p>Player 2 Score: <span id="player2-score">0</span></p>
+        <p>Draws: <span id="draw-score">0</span></p>
+    </section>
+
+    <section id="player-selections">
+        <div id = "player1-section">
+            <h2>Player 1 Choice</h2>
+            <button class="p1-choice" data-choice="gun">Gun</button>
+            <button  class="p1-choice" data-choice="water">Water</button>
+            <button  class="p1-choice" data-choice="snake">Snake</button>
+            <p>Selected: <span id="player1-choice-display">-</span></p>
+        </div>
+        <div id = "player2-section">
+            <h2>Player 2 Choice</h2>
+            <button class="p2-choice" data-choice="gun">Gun</button>
+            <button class="p2-choice" data-choice="water">Water</button>
+            <button class="p2-choice" data-choice="snake">Snake</button>
+            <p>Selected: <span id="player2-choice-display">-</span>
+                </p>
+        </div>
+    </section>
+
+    <section id="round-result>">
+        <h2>Round Result</h2>
+        <p id="round-message">Make your choices!</p>
+    </section>
+    
+    <section id="final-result">
+        <h2>Final Result</h2>
+        <p id="final-message">overall winner will be displayed here after 10 rounds </p>
+    </section>
+
+    <section id="controls">
+        <button id="next-round-btn" disabled>Next Round</button>
+        <button id="reset-game-btn">Reset game</button>
+    </section>
+</body>
+</html>

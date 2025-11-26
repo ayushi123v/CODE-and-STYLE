@@ -1,0 +1,86 @@
+body{
+    font-family:Arial, Helvetica, sans-serif ;
+    background: linear-gradient(135deg,#1e293b,#0f172a);
+    color:#ffffff;
+    text-align: center;
+    padding: 20px;
+}
+h1 , h2{
+    color:#38bdf8;
+}
+section{
+    background: rgba(255, 255, 255, 0.8);
+    padding: 18px;
+    margin:18px auto;
+    width: 80%;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+}
+/* #scoreboard{
+    font-size: 1.2rem;
+    margin: 6px 0;
+    
+} */
+#player-selections{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+#player1-section, #player2-section {
+    width: 42%;
+}
+
+button {
+    background: #38bdf8;
+    border: none;
+    padding: 12px 22px;
+    margin: 8px;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: rgb(3, 110, 216);
+    transform: scale(1.05);
+}
+#reset-game-btn {
+    background: #ef4444;
+}
+#reset-game-btn:hover {
+    background: #820303;
+}
+
+#next-round-btn {
+    background: #22c55e;
+}
+#next-round-btn:hover {
+    background: #038836;
+}
+#player1-choice-display,
+#player2-choice-display {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #facc15;
+}
+
+/* Final Message */
+#final-message {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #371ca1;
+}
+
+@media (max-width: 700px) {
+    #player-selections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #player1-section, #player2-section {
+        width: 90%;
+    }
+}
