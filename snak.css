@@ -14,13 +14,12 @@ section{
     margin:18px auto;
     width: 80%;
     border-radius: 12px;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(10px);
 }
-/* #scoreboard{
+#scoreboard{
     font-size: 1.2rem;
-    margin: 6px 0;
     
-} */
+}
 #player-selections{
     display: flex;
     justify-content: space-around;
