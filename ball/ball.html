@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+           width:300px;
+           height: 200px;
+           border:2px solid black ;
+           position: relative;
+           overflow: hidden;
+        }
+        #ball{
+            width: 30px;
+            height: 30px;
+            background:red;
+            border-radius: 50%;
+            position: absolute;
+            left: 10px;
+            top: 10px;;
+        }
+    </style>
+</head>
+<body>
+    <h2>bouncing ball</h2>
+    <div id="box">
+        <div id="ball"></div>
+    </div>
+    <br>
+    <button id="startbtn">Start</button>
+    <button id="stopbtn">Stop</button>
+
+   <script>
+    let ball=document.getElementById("ball");
+    let box=document.getElementById("box");
+    let vx=2, vy=2;
+    let animation;
+    function moveBall(){
+        const x= ball.offsetLeft+vx;
+        const y=ball.offsetTop+vy;
+
+        if(x+30>=box.clientWidth || x<=0){
+            vx*=-1;
+
+        }
+        if(y+30>=box.clientHeight || y<=0){
+            vy*=-1;
+
+        }
+        ball.style.left= x+"px";
+        ball.style.top= y+"px";
+
+        animation=requestAnimationFrame(moveBall);
+
+
+    }
+    document.getElementById("startbtn").onclick=moveBall;
+    document.getElementById("stopbtn").onclick=function(){
+        cancelAnimationFrame(animation);
+    };
+        
+   </script>
+</body>
+</html>

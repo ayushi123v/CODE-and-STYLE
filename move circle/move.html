@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+              width:300px;
+              height: 150px;
+              border:2px solid black ;
+              position: relative;
+              overflow: hidden;
+        }
+        #circle{
+            width: 40px;
+            height: 40px;
+            background:blue;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Moving Circle</h2>
+    <div id="box">
+    </div>
+    <div id="circle"></div>
+    </div>
+
+    <br>
+    <button id="start">move</button>
+    <button id="stop">reset</button>
+
+    <script>
+        let circle = document.getElementById("circle");
+
+        document.getElementById("start").onclick = ()=>{
+            let maxX = 300-40-10;
+            circle.style.transition="1s";
+            circle.style.left=maxX+"px";
+        };
+         document.getElementById("stop").onclick = () => {
+    circle.style.left = "10px";
+        };
+    </script>
+</body>
+</html>
